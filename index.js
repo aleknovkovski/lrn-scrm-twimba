@@ -13,19 +13,19 @@ function getFeedHtml(){
         return`
         <div class="tweet">
             <div class="tweet-inner">
-                <img src="URL OF PROFILE PIC" class="profile-pic">
+                <img src="${tweet.profilePic}" class="profile-pic">
                 <div>
-                    <p class="handle">TWEET HANDLE</p>
-                    <p class="tweet-text">TWEET TEXT</p>
+                    <p class="handle">${tweet.handle}</p>
+                    <p class="tweet-text">${tweet.tweetText}</p>
                     <div class="tweet-details">
                         <span class="tweet-detail">
-                            NUMBER OF REPLIES
+                            ${tweet.replies.length}
                         </span>
                         <span class="tweet-detail">
-                            NUMBER OF LIKES
+                            ${tweet.likes}
                         </span>
                         <span class="tweet-detail">
-                            NUMBER OF RETWEETS
+                            ${tweet.retweets}
                         </span>
                     </div>   
                 </div>            
