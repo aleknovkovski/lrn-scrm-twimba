@@ -8,7 +8,7 @@ tweetBtn.addEventListener("click", e=> {
 })
 
 function getFeedHtml(){
-    console.log(tweetsData)
+    // console.log(tweetsData)
     let markup = ""
     tweetsData.forEach(tweet => {
         markup += `
@@ -34,7 +34,7 @@ function getFeedHtml(){
         </div>`
     })
 
-    document.body.innerHTML += markup
+    // document.body.innerHTML += markup
     return markup
 }
 
