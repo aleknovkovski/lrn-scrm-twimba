@@ -8,6 +8,10 @@ tweetBtn.addEventListener("click", e=> {
 })
 
 function getFeedHtml(){
+    console.log(tweetsData)
+    for (let tweet of tweetsData) {
+        return`le tweet`
+    }
     /*
     Challenge:
     1. Use a "for of" to iterate over the data and
@@ -19,3 +23,5 @@ function getFeedHtml(){
     4. Call getFeedHtml to check it's working.
     */
 }
+
+getFeedHtml()
