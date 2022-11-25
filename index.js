@@ -33,7 +33,8 @@ function getFeedHtml(){
             </div>
         </div>
     `
-    return markup
+    document.body.innerHTML += markup
+    // return markup
     }
     /*
     Challenge:
