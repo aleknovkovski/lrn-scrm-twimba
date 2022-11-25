@@ -33,8 +33,7 @@ function getFeedHtml(){
             </div>
         </div>
     `
-    document.body.innerHTML += markup
-    // return markup
+    // document.body.innerHTML += markup
     }
     /*
     Challenge:
@@ -46,6 +45,7 @@ function getFeedHtml(){
     3. Log out feedHtml.
     4. Call getFeedHtml to check it's working.
     */
+    return markup
 }
 
 getFeedHtml()
