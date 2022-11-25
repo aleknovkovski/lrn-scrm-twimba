@@ -9,8 +9,9 @@ tweetBtn.addEventListener("click", e=> {
 
 function getFeedHtml(){
     console.log(tweetsData)
+    let markup = ""
     for (let tweet of tweetsData) {
-        return`
+        markup += `
         <div class="tweet">
             <div class="tweet-inner">
                 <img src="${tweet.profilePic}" class="profile-pic">
@@ -31,7 +32,9 @@ function getFeedHtml(){
                 </div>            
             </div>
         </div>
-    `}
+    `
+    return markup
+    }
     /*
     Challenge:
     1. Use a "for of" to iterate over the data and
