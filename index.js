@@ -9,9 +9,9 @@ tweetBtn.addEventListener("click", e=> {
 
 function getFeedHtml(){
     // console.log(tweetsData)
-    let markup = ""
+    let feedHtml = ""
     tweetsData.forEach(tweet => {
-        markup += `
+        feedHtml += `
         <div class="tweet">
             <div class="tweet-inner">
                 <img src="${tweet.profilePic}" class="profile-pic">
@@ -34,8 +34,8 @@ function getFeedHtml(){
         </div>`
     })
 
-    // document.body.innerHTML += markup
-    return markup
+    // document.body.innerHTML += feedHtml
+    return feedHtml
 }
 
 getFeedHtml()
