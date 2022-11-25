@@ -10,8 +10,28 @@ tweetBtn.addEventListener("click", e=> {
 function getFeedHtml(){
     console.log(tweetsData)
     for (let tweet of tweetsData) {
-        return`le tweet`
-    }
+        return`
+        <div class="tweet">
+            <div class="tweet-inner">
+                <img src="URL OF PROFILE PIC" class="profile-pic">
+                <div>
+                    <p class="handle">TWEET HANDLE</p>
+                    <p class="tweet-text">TWEET TEXT</p>
+                    <div class="tweet-details">
+                        <span class="tweet-detail">
+                            NUMBER OF REPLIES
+                        </span>
+                        <span class="tweet-detail">
+                            NUMBER OF LIKES
+                        </span>
+                        <span class="tweet-detail">
+                            NUMBER OF RETWEETS
+                        </span>
+                    </div>   
+                </div>            
+            </div>
+        </div>
+    `}
     /*
     Challenge:
     1. Use a "for of" to iterate over the data and
