@@ -39,8 +39,7 @@ function getFeedHtml(){
 }
 
 function render(){
-    const feedEl = document.getElementById('feed')
-    feedEl.innerHTML = getFeedHtml()
+    document.getElementById('feed').innerHTML = getFeedHtml()
     /*
     Challenge:
     1. Take control of the ‘feed’ div.
