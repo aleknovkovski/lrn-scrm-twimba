@@ -20,6 +20,7 @@ tweetBtn.addEventListener("click", e=> {
         uuid: uuidv4(),
     }
 
+    tweetInput.value = ""
     tweetsData.unshift(newTweet)
     render()
 })
