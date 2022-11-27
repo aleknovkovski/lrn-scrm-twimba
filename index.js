@@ -13,6 +13,10 @@ document.addEventListener("click", (e)=>{
     if(dataset.like) {
      handleLikeClick(dataset.like)
     }
+
+    if(dataset.retweet) {
+        handleRetweetClick(dataset.retweet)
+    }
 })
 
 function handleLikeClick(uuid){
@@ -22,6 +26,17 @@ function handleLikeClick(uuid){
 
     !tweet.isLiked ? tweet.likes++ : tweet.likes--
     tweet.isLiked = !tweet.isLiked
+
+    render()
+}
+
+function handleRetweetClick(uuid){
+    const tweet = tweetsData.filter((tweet)=> {
+        return tweet.uuid === uuid
+    })[0]
+
+    !tweet.isRetweeted ? tweet.retweets++ : tweet.retweets--
+    tweet.isRetweeted = !tweet.isRetweeted
 
     render()
 }
