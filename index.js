@@ -84,7 +84,9 @@ function getFeedHtml(){
                             ></i>
                         </span>
                     </div>   
-                    ${repliesSection}
+                    <div id="replies-${tweet.uuid}">
+                        ${repliesSection}
+                    </div> 
                 </div>            
             </div>
         </div>`
