@@ -8,8 +8,16 @@ tweetBtn.addEventListener("click", e=> {
 })
 
 document.addEventListener("click", (e)=>{
-    console.log(e.target.dataset.like)
+    const dataset = e.target.dataset
+
+    if(dataset.like) {
+     handleLikeClick(dataset.like)
+    }
 })
+
+function handleLikeClick(uuid){
+    console.log(uuid)
+}
 
 function getFeedHtml(){
     // console.log(tweetsData)
