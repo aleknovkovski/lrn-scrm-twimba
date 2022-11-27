@@ -5,7 +5,23 @@ const tweetInput = document.getElementById('tweet-input')
 const tweetBtn = document.getElementById('tweet-btn')
 
 tweetBtn.addEventListener("click", e=> {
-    console.log(tweetInput.value)
+    const tweetText = tweetInput.value;
+    if (!tweetText) {return}
+
+    const newTweet = {
+        handle: `@User`,
+        profilePic: `images/scrimbalogo.png`,
+        likes: 0,
+        retweets:0,
+        tweetText: tweetText,
+        replies: [],
+        isLiked: false,
+        isRetweeted: false,
+        uuid: uuidv4(),
+    }
+
+    tweetsData.unshift(newTweet)
+    render()
 })
 
 document.addEventListener("click", (e)=>{
