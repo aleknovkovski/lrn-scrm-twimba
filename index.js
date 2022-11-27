@@ -52,7 +52,20 @@ function getFeedHtml(){
         tweet.isRetweeted ? retweetIconClass = "retweeted" : null
 
         let repliesSection = ""
-        tweet.replies.length ? repliesSection = "<p>Has Replies</p>" : null
+        if (tweet.replies.length) {
+            tweet.replies.forEach(reply => {
+                repliesSection += `
+                <div class="tweet-reply">
+                    <div class="tweet-inner">
+                        <img src="${reply.profilePic}" class="profile-pic">
+                            <div>
+                                <p class="handle">${reply.handle}</p>
+                                <p class="tweet-text">${reply.tweetText}</p>
+                            </div>
+                        </div>
+                </div>`
+            })
+        }
 
         feedHtml += `
         <div class="tweet">
