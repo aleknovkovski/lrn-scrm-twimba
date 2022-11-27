@@ -17,6 +17,10 @@ document.addEventListener("click", (e)=>{
     if(dataset.retweet) {
         handleRetweetClick(dataset.retweet)
     }
+
+    if(dataset.reply) {
+        handleRepliesClick(dataset.reply)
+    }
 })
 
 function handleLikeClick(uuid){
@@ -39,6 +43,11 @@ function handleRetweetClick(uuid){
     tweet.isRetweeted = !tweet.isRetweeted
 
     render()
+}
+
+function handleRepliesClick(uuid) {
+    const tweetID = "replies-" + uuid;
+    document.getElementById(tweetID).classList.toggle("hidden")
 }
 
 function getFeedHtml(){
