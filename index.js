@@ -51,6 +51,9 @@ function getFeedHtml(){
         let retweetIconClass = ""
         tweet.isRetweeted ? retweetIconClass = "retweeted" : null
 
+        let repliesSection = ""
+        tweet.replies.length ? repliesSection = "<p>Has Replies</p>" : null
+
         feedHtml += `
         <div class="tweet">
             <div class="tweet-inner">
@@ -81,6 +84,7 @@ function getFeedHtml(){
                             ></i>
                         </span>
                     </div>   
+                    ${repliesSection}
                 </div>            
             </div>
         </div>`
