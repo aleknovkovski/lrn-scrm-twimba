@@ -44,7 +44,10 @@ function handleRetweetClick(uuid){
 function getFeedHtml(){
     // console.log(tweetsData)
     let feedHtml = ""
+
     tweetsData.forEach(tweet => {
+        let likedIconClass = ""
+
         feedHtml += `
         <div class="tweet">
             <div class="tweet-inner">
