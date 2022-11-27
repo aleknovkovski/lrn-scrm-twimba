@@ -97,7 +97,7 @@ function getFeedHtml(){
                             ></i>
                         </span>
                     </div>   
-                    <div id="replies-${tweet.uuid}">
+                    <div class="hidden" id="replies-${tweet.uuid}">
                         ${repliesSection}
                     </div> 
                 </div>            
