@@ -19,7 +19,11 @@ function handleLikeClick(uuid){
     const tweet = tweetsData.filter((tweet)=> {
         return tweet.uuid === uuid
     })[0]
-    console.log(tweet)
+
+    !tweet.isLiked ? tweet.likes++ : tweet.likes--
+    tweet.isLiked = !tweet.isLiked
+
+    render()
 }
 
 function getFeedHtml(){
